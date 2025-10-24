@@ -19,9 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-/**
- * Lógica de Validação e Envio para o Login
- */
+
+    /* Lógica de Validação e Envio para o Login* só para a validação básica,mas
+    pode ser aprimorada se o grajau pedi algo */
+                            
 function handleLogin(event) {
     event.preventDefault(); // Impede o envio padrão do formulário
 
@@ -44,10 +45,10 @@ function handleLogin(event) {
     // 2. Preparar e Enviar dados ao servidor (Tarefa 4)
     enviarDados('/login', { email, senha })
         .then(response => {
-            // Se o Backend retornar sucesso:
+            // Se o Backend(O kaua, vulgo errei fui paia) retornar sucesso:
             if (response.sucesso) {
                 alert("Login bem-sucedido! Redirecionando...");
-                // Redirecionar para a página inicial (que ainda será desenvolvida)
+                // Redirecionar para a página inicial (que ainda será desenvolvida pelo irviton nayron)
                 window.location.href = 'pagina_inicial.html'; 
             } else {
                 // Mensagem do Backend, ex: "Credenciais inválidas"
@@ -60,11 +61,10 @@ function handleLogin(event) {
         });
 }
 
-/**
- * Lógica de Validação e Envio para o Cadastro
- */
+
+ /* Lógica de Validação e Envio para o Cadastro */
 function handleCadastro(event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
+    event.preventDefault(); 
 
     // 1. Coleta os dados dos campos
     const nome = document.getElementById('nomeCadastro').value.trim();
@@ -91,7 +91,7 @@ function handleCadastro(event) {
         return;
     }
 
-    // (Opcional) Validação de força da senha (ex: mínimo de 6 caracteres)
+    // Validação de força da senha, a coisa que não pode faltar, lembrete : muda para 5 ou 7.
     if (senha.length < 6) {
         alert("A senha deve ter pelo menos 6 caracteres.");
         return;
@@ -100,7 +100,7 @@ function handleCadastro(event) {
     // 3. Preparar e Enviar dados ao servidor (Tarefa 4)
     enviarDados('/cadastro', { nome, email, senha }) // Não enviamos a confirmação de senha
         .then(response => {
-            // Se o Backend retornar sucesso, o fluxo é para confirmação de e-mail (conforme Figma)
+            // Se o Backend(Anhtony) retornar sucesso, o fluxo é para confirmação de e-mail (conforme Figma)
             if (response.sucesso) {
                 alert("Cadastro realizado! Verifique seu e-mail.");
                 // Redireciona para a próxima tela do fluxo
@@ -116,11 +116,8 @@ function handleCadastro(event) {
         });
 }
 
-// ... (O resto do seu código, incluindo a função enviarDados, permanece o mesmo)
-
 /**
- * Função genérica para comunicação com o Backend
- */
+ * Função genérica para comunicação com o Backend*/
 async function enviarDados(endpoint, dados) {
     // ATENÇÃO: A URL base deve ser a do servidor Backend (Etapa 4 - Kauã)
     const URL_BASE_BACKEND = 'http://localhost:3000'; // Exemplo padrão
@@ -148,15 +145,14 @@ async function enviarDados(endpoint, dados) {
     }
 }
 
-// **Você deverá adicionar a função handleCadastro para a tela de criar_conta.html**
 
-/**
- * Lógica de Validação e Envio para o Cadastro
- */
+
+
+ /*Lógica de Validação e Envio para o Cadastro*/
 function handleCadastro(event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
+    event.preventDefault(); 
 
-    // 1. Coleta os dados dos campos
+   
     const nome = document.getElementById('nomeCadastro').value.trim();
     const email = document.getElementById('emailCadastro').value.trim();
     const senha = document.getElementById('senhaCadastro').value.trim();
@@ -164,7 +160,7 @@ function handleCadastro(event) {
 
     // 2. Validação de campos (Tarefa 3)
 
-    // A. Verifica se há campos vazios
+   
     if (!nome || !email || !senha || !confirmarSenha) {
         alert("Por favor, preencha todos os campos do formulário.");
         return;
@@ -207,25 +203,25 @@ function handleCadastro(event) {
 
 
 function handleCadastro(event) {
-    // ... (Código de validações de nome, e-mail e senha) ...
-
-    // Se as validações passarem, o código chega aqui.
-
-    // 3. Preparar e Enviar dados ao servidor (Tarefa 4)
-    // *** MUDE ESTE BLOCO PARA SIMULAR SUCESSO ***
+   
     
-    // --- CÓDIGO TEMPORÁRIO PARA TESTE DE FLUXO ---
+    // --- Aqui seria mais um código pra se testar o fluxo, o fluxo seria como que o codigo ta se
+    // comportando. ---
     const emailCadastro = document.getElementById('emailCadastro').value.trim();
     
     alert("Simulando sucesso de Cadastro para: " + emailCadastro);
     
-    // Redireciona DIRETAMENTE, ignorando o fetch (comunicação com o Backend)
+    // aqui ele ignora o Fetch que seria a parte do back end
     window.location.href = 'confirmar_email.html'; 
-    return; // Para a execução do restante da função
+    return; 
 
-    // --- FIM DO CÓDIGO TEMPORÁRIO ---
+   
 
-    /* LEMBRETE IMPORTANTE, A VALIDAÇÃO DO EMAIL SÓ VAI FUNCIONA POR PARTE DO BACK-END
+    /* Lembrete Importante, a validação só funciona quando o Kauã fizer o back end
+
+     ai aqui seria o codigo comentado da tela de validação, mas da pra eu fazer so a parte visual
+     e depois meio que excluir isso. provalmente posso fazer igual o confirma senha.
+
     enviarDados('/cadastro', { nome, email, senha }) 
         .then(response => {
             if (response.sucesso) {
