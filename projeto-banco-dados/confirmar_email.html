@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar E-mail | Plataforma BD</title>
+    <link rel="stylesheet" href="/style.css"> 
+    <style>
+        .code-input-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 25px 0;
+        }
+        .code-input-group input {
+            width: 50px;
+            height: 60px;
+            text-align: center;
+            font-size: 24px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-container">
+        <div class="form-box" style="max-width: 450px;">
+            <h2>Confirme seu e-mail</h2>
+            
+            <p>Um código de 4 dígitos foi enviado para o seu e-mail.</p>
+            
+            <form id="formConfirmacaoEmail">
+                <div class="code-input-group">
+                    <input type="text" id="code1" maxlength="1" required autofocus>
+                    <input type="text" id="code2" maxlength="1" required>
+                    <input type="text" id="code3" maxlength="1" required>
+                    <input type="text" id="code4" maxlength="1" required>
+                </div>
+
+                <button type="submit" class="btn-primary">Confirmar Código</button>
+            </form>
+            
+            <a href="#" class="link-secundary">Reenviar código</a> 
+            
+        </div>
+    </div>
+    <script src="/script.js"></script> 
+</body>
+</html>
