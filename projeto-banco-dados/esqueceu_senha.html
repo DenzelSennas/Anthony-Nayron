@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha | Plataforma BD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-container">
+        <div class="form-box">
+            <h2>Recuperar Senha</h2>
+
+            <p class="descricao">
+                Digite o e-mail cadastrado. Enviaremos um link para redefinir sua senha.
+            </p>
+
+            <form id="formRecuperarSenha">
+                <div class="input-group">
+                    <label for="emailRecuperar">E-mail</label>
+                    <input type="email" id="emailRecuperar" name="email" required placeholder="Digite seu e-mail">
+                </div>
+
+                <button type="submit" class="btn-primary">Enviar link de redefinição</button>
+            </form>
+
+            <a href="index.html" class="link-secundary">Voltar ao Login</a>
+        </div>
+    </div>
+
+    <script>
+        // Exemplo simples de ação ao enviar o formulário
+        document.getElementById("formRecuperarSenha").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const email = document.getElementById("emailRecuperar").value;
+            if (email.trim() === "") {
+                alert("Por favor, preencha o e-mail!");
+                return;
+            }
+            alert(`Se existir uma conta com o e-mail ${email}, enviaremos um link para redefinir a senha.`);
+            // Aqui você pode futuramente integrar com backend (PHP, JS, Firebase, etc.)
+        });
+    </script>
+</body>
+</html>

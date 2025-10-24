@@ -4,21 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirmar E-mail | Plataforma BD</title>
-    <link rel="stylesheet" href="/style.css"> 
+    <link rel="stylesheet" href="style.css">
+    
     <style>
+        /* Centraliza os inputs e adiciona espaço entre eles */
         .code-input-group {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 15px; /* Espaço entre as caixas */
             margin: 25px 0;
         }
+        
+        /* Estiliza cada input para parecer um bloco de código */
         .code-input-group input {
-            width: 50px;
+            width: 50px; /* Largura pequena */
             height: 60px;
             text-align: center;
             font-size: 24px;
-            border: 2px solid #ccc;
+            font-weight: bold;
+            border: 2px solid #007B8C; /* Borda da cor primária (Verde Escuro) */
             border-radius: 4px;
+            /* Remove a borda padrão do input-group, se houver */
+            padding: 0; 
+        }
+        
+        /* Estilo para a mensagem que aparece antes dos inputs */
+        .instruction-text {
+            color: #555555;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -27,14 +40,17 @@
         <div class="form-box" style="max-width: 450px;">
             <h2>Confirme seu e-mail</h2>
             
-            <p>Um código de 4 dígitos foi enviado para o seu e-mail.</p>
+            <p class="instruction-text">
+                Digite o código de 4 dígitos enviado para seu e-mail.
+            </p>
             
-            <form id="formConfirmacaoEmail">
+            <form>
+                
                 <div class="code-input-group">
-                    <input type="text" id="code1" maxlength="1" required autofocus>
-                    <input type="text" id="code2" maxlength="1" required>
-                    <input type="text" id="code3" maxlength="1" required>
-                    <input type="text" id="code4" maxlength="1" required>
+                    <input type="text" maxlength="1" placeholder="-">
+                    <input type="text" maxlength="1" placeholder="-">
+                    <input type="text" maxlength="1" placeholder="-">
+                    <input type="text" maxlength="1" placeholder="-">
                 </div>
 
                 <button type="submit" class="btn-primary">Confirmar Código</button>
@@ -44,6 +60,6 @@
             
         </div>
     </div>
-    <script src="/script.js"></script> 
+    <script src="script.js"></script>
 </body>
 </html>

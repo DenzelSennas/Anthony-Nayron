@@ -225,7 +225,7 @@ function handleCadastro(event) {
 
     // --- FIM DO CÓDIGO TEMPORÁRIO ---
 
-    /* O BLOCO ORIGINAL DO FETCH ABAIXO SÓ FUNCIONARÁ QUANDO O BACKEND ESTIVER PRONTO!
+    /* LEMBRETE IMPORTANTE, A VALIDAÇÃO DO EMAIL SÓ VAI FUNCIONA POR PARTE DO BACK-END
     enviarDados('/cadastro', { nome, email, senha }) 
         .then(response => {
             if (response.sucesso) {

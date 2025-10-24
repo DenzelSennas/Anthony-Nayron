@@ -1,8 +1,8 @@
-/* Defina as variáveis de cor com base no seu Figma para consistência */
+/* Defina as variáveis de cor leves ou muda para cores mais forte? eis a questão */
 :root {
-    --cor-fundo: #D0EBE8; /* Verde-água claro */
+    --cor-fundo: #D0EBE8; /* Verde-água claro, que cor massa */
     --cor-primaria: #007B8C; /* Verde escuro para botões/links */
-    --cor-texto: #333333;
+    --cor-texto: #333333; 
     --cor-box: #FFFFFF;
 }
 
@@ -14,7 +14,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ocupa a altura total da tela */
+    height: 100vh; /* Ocupa a altura total da tela, lembrete : talvez eu altere */
 }
 
 .form-box {
@@ -23,7 +23,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 380px; /* Largura conforme seu design no Figma */
+    max-width: 380px; 
     text-align: center;
 }
 
@@ -72,3 +72,5 @@ input[type="text"] {
     margin-top: 15px;
     font-size: 14px;
 }
+
+/* tudo ok, talvez eu altere para parecer com o designer do Vicente ou vice-versa */
