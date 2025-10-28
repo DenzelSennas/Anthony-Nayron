@@ -46,12 +46,11 @@ server.port=8080
 ## Banco de Dados
 Exemplo de criação da tabela `users`:
 ```sql
-CREATE TABLE users (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  username VARCHAR(50) NOT NULL UNIQUE,
-  password VARCHAR(255) NOT NULL,
-  email VARCHAR(100),
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE users(
+  id_user INT PRIMARY KEY AUTO_INCREMENT,
+  nome VARCHAR(80) NOT NULL,
+  email VARCHAR(80) NOT NULL,
+  senha VARCHAR(55) NOT NULL
 );
 ```
 
@@ -77,6 +76,7 @@ docker run -p 8080:8080 -e SPRING_PROFILES_ACTIVE=prod banco-login
 3. Faça commits pequenos e com mensagens claras.
 4. Envie um Pull Request descrevendo a mudança.
 
-## Autor
+## Autor 
+- Clecio Ferreira Freire <clecioferreira011@gmail.com>
 - Vicente Gomes — <seu-email@exemplo.com>
 
