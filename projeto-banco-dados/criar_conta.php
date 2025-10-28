@@ -1,3 +1,23 @@
+<?php
+
+  if(isset($_POST['submit'])){
+    // print_r($_POST['nome']);
+    // print_r($_POST['email']);
+    // print_r($_POST['senha']);
+
+    include_once('config.php');
+
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+
+    $result = mysqli_query($conexao, "INSERT INTO users(nome, email, senha) 
+    VALUES ('$nome', '$email', '$senha')");
+    
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,7 +31,7 @@
         <div class="form-box">
             <h2>Criar uma conta</h2>
             
-            <form id="formCadastro">
+            <form action="formulario.php" method="POST" id="formCadastro">
                 
                 <div class="input-group">
                     <label for="nomeCadastro">Nome</label>
