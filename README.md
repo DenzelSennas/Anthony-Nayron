@@ -49,7 +49,7 @@ Exemplo de criação da tabela `users`:
 CREATE TABLE users(
   id_user INT PRIMARY KEY AUTO_INCREMENT,
   nome VARCHAR(80) NOT NULL,
-  email VARCHAR(80) NOT NULL,
+  email VARCHAR(80) NOT NULL UNIQUE,
   senha VARCHAR(55) NOT NULL
 );
 ```
